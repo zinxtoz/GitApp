@@ -1,0 +1,122 @@
+﻿using System;
+
+namespace OperatorTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] pa = new int[6];
+            bool cia = false;
+            bool fbi = true;
+            bool nsa = true;
+            string p;
+            string org;
+
+            while (cia == false)
+            {
+                Console.Write("Please Enter 6 Digit Password : ");
+                p = Console.ReadLine();
+                while (p.Length > 6 || p.Length < 6)
+                {
+                    Console.WriteLine("Format is not Correct!!! Please Try Again.");
+                    Console.Write("Please Enter 6 Digit Password : ");
+                    p = Console.ReadLine();
+                }
+                for (int i = 0; i < p.Length; i++)
+                    pa[i] = p[i] - '0';
+
+                Console.Write("Please Enter Your Organization : ");
+                org = Console.ReadLine();
+                while (org != "CIA" && org != "FBI" && org != "NSA")
+                {
+                    Console.WriteLine("Format is Not Correct!!! Please Try Again.");
+                    Console.Write("Please Enter Your Organization : ");
+                    org = Console.ReadLine();
+                }
+                if (org == "CIA" && pa[5] % 3 == 0 && pa[4] != 1 && pa[4] != 3 && pa[4] != 5 && pa[2] >= 6 && pa[2] != 8)
+                {
+                    cia = true;
+                    Console.WriteLine("Your Password is : " + cia.ToString());
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Your Password is : " + cia.ToString());
+                    cia = false;
+                }
+
+                while (fbi == false)
+                {
+                    Console.Write("Please Enter 6 Digit Password : ");
+                    p = Console.ReadLine();
+                    while (p.Length > 6 || p.Length < 6)
+                    {
+                        Console.WriteLine("Format is not Correct!!! Please Try Again.");
+                        Console.Write("Please Enter 6 Digit Password : ");
+                        p = Console.ReadLine();
+                    }
+                    for (int i = 0; i < p.Length; i++)
+                        pa[i] = p[i] - '0';
+
+                    Console.Write("Please Enter Your Organization : ");
+                    org = Console.ReadLine();
+                    while (org != "FBI" && org != "CIA" && org != "NSA")
+                    {
+                        Console.WriteLine("Format is Not Correct!!! Please Try Again.");
+                        Console.Write("Please Enter Your Organization : ");
+                        org = Console.ReadLine();
+                    }
+                    if (org == "FBI" && pa[0] >= 4 && pa[0] <= 7 && pa[1] % 2 != 0 && pa[3] % 2 == 0 && pa[3] != 6)
+
+                    {
+                        fbi = true;
+                        Console.WriteLine("Your Password is : " + fbi.ToString());
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your Password is : " + fbi.ToString());
+                        fbi = false;
+                    }
+                    while (nsa == false)
+                    {
+                        Console.Write("Please Enter 6 Digit Password : ");
+                        p = Console.ReadLine();
+                        while (p.Length > 6 || p.Length < 6)
+                        {
+                            Console.WriteLine("Format is not Correct!!! Please Try Again.");
+                            Console.Write("Please Enter 6 Digit Password : ");
+                            p = Console.ReadLine();
+                        }
+                        for (int i = 0; i < p.Length; i++)
+                            pa[i] = p[i] - '0';
+
+                        Console.Write("Please Enter Your Organization : ");
+                        org = Console.ReadLine();
+                        while (org != "FBI" && org != "CIA" && org != "NSA")
+                        {
+                            Console.WriteLine("Format is Not Correct!!! Please Try Again.");
+                            Console.Write("Please Enter Your Organization : ");
+                            org = Console.ReadLine();
+                        }
+                        if (org == "NSA" && pa[5] == 1 && pa[5] == 2 && pa[5] == 3 && pa[5] == 5 && pa[5] == 6 && pa[5] == 10 && pa[5] == 15 && pa[5] == 30
+                                && pa[3] % 3 == 0 && pa[3] % 2 != 0 || pa[0] == 7 || pa[1] == 7 || pa[2] == 7 || pa[3] == 7 || pa[4] == 7 || pa[5] == 7)
+
+                        {
+                            nsa = true;
+                            Console.WriteLine("Your Password is : " + nsa.ToString());
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Your Password is : " + nsa.ToString());
+                            nsa = false;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
