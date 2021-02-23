@@ -100,8 +100,7 @@ namespace OperatorTest
                             Console.Write("Please Enter Your Organization : ");
                             org = Console.ReadLine();
                         }
-                        if (org == "NSA" && pa[5] == 1 && pa[5] == 2 && pa[5] == 3 && pa[5] == 5 && pa[5] == 6 && pa[5] == 10 && pa[5] == 15 && pa[5] == 30
-                                && pa[3] % 3 == 0 && pa[3] % 2 != 0 || pa[0] == 7 || pa[1] == 7 || pa[2] == 7 || pa[3] == 7 || pa[4] == 7 || pa[5] == 7)
+                        if (org == "NSA" && pa[5] == 1 && pa[5] == 2 && pa[5] == 3 && pa[5] == 5 && pa[5] == 6 && pa[3] % 3 == 0 && pa[3] % 2 != 0 || pa[0] == 7 || pa[1] == 7 || pa[2] == 7 || pa[3] == 7 || pa[4] == 7 || pa[5] == 7)
 
                         {
                             nsa = true;
