@@ -67,7 +67,7 @@ namespace OperatorTest
                         Console.Write("Please Enter Your Organization : ");
                         org = Console.ReadLine();
                     }
-                    if (org == "FBI" && pa[0] >= 4 && pa[0] <= 7 && pa[1] % 2 != 0 && pa[3] % 2 == 0 && pa[3] != 6)
+                    if (org == "FBI" && pa[0] >= 4 || pa[0] <= 7 && pa[1] % 2 != 0 && pa[3] % 2 == 0 && pa[3] != 6)
 
                     {
                         fbi = true;
