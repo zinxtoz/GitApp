@@ -1,0 +1,26 @@
+public class MyProgram
+        {
+            public static void Main(string[] args)
+            {
+                int x, y;
+                Console.WriteLine("Input Number A:");
+                x = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Input Number B:");
+                y = int.Parse(Console.ReadLine());
+                if (x == y)
+                {
+                    Console.WriteLine(x);
+                }
+                else
+                {
+                    if (x < y)
+                    {
+                        x = x + x;
+                    }
+                    else
+                    {
+                        y = y + y;
+                    }
+                }
+            }
