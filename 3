@@ -1,0 +1,47 @@
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int x, y,z;
+
+            Console.WriteLine("Box in Bowl 1:");
+            x = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Box in Bowl 2:");
+            y = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Box in Bowl 3:");
+            z = int.Parse(Console.ReadLine());
+
+
+            while (x > 0)
+            {
+                Console.WriteLine("There are " + x + " remaining.");
+                Console.WriteLine("How many do you take?");
+                int playertake = Convert.ToInt32(Console.ReadLine());
+
+                if (playertake < 1 | playertake > 3)
+                {
+                    Console.WriteLine("1, 2, or 3 only.");
+                }
+                else
+                {
+                    y -= playertake;
+                    Console.WriteLine("I take " + (4 - playertake) + ".");
+                    z -= (4 - playertake);
+                }
+            }
+            Console.WriteLine("I win again.");
+            Console.ReadLine();
+
+
+        }
+}
+
+}
+
