@@ -1,0 +1,60 @@
+using System;
+
+namespace Homework5
+{
+    class Program
+    {
+        static double[,] ReadImageDataFromFile(string imageDataFilePath)
+        {
+            string[] lines = System.IO.File.ReadAllLines(imageDataFilePath);
+            int imageHeight = lines.Length;
+            int imageWidth = lines[0].Split(',').Length;
+            double[,] imageDataArray = new double[imageHeight, imageWidth];
+
+            for (int i = 0; i < imageHeight; i++)
+            {
+                string[] items = lines[i].Split(',');
+                for (int j = 0; j < imageWidth; j++)
+                {
+                    imageDataArray[i, j] = double.Parse(items[j]);
+                }
+            }
+            return imageDataArray;
+        }
+
+        static void WriteImageDataToFile(string imageDataFilePath,
+                                 double[,] imageDataArray)
+        {
+            string imageDataString = "";
+            for (int i = 0; i < imageDataArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < imageDataArray.GetLength(1) - 1; j++)
+                {
+                    imageDataString += imageDataArray[i, j] + ", ";
+                }
+                imageDataString += imageDataArray[i,
+                                                imageDataArray.GetLength(1) - 1];
+                imageDataString += "\n";
+            }
+
+            System.IO.File.WriteAllText(imageDataFilePath, imageDataString);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Input file location: ");
+            string path = Console.ReadLine();
+            Console.WriteLine("Enter Convolution file location: ");
+            string path2 = Console.ReadLine();
+            Console.WriteLine("Enter Output file location: ");
+            string path3 = Console.ReadLine();
+
+            ReadImageDataFromFile(path);
+            ReadImageDataFromFile(path2);
+
+
+
+
+        }
+    }
+}
