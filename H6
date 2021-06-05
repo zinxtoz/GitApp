@@ -1,0 +1,67 @@
+using System;
+
+namespace Homework6
+{
+    class Program
+    {
+        enum Difficulty
+        {
+            Easy = 0,
+            Normal = 1,
+            Hard = 3
+        }
+
+        struct Problem
+        {
+            public string Message;
+            public int Answer;
+
+            public Problem(string message, int answer)
+            {
+                Message = message;
+                Answer = answer;
+            }
+        }
+
+        static Problem[] GenerateRandomProblems(int numProblem)
+        {
+            Problem[] randomProblems = new Problem[numProblem];
+
+            Random rnd = new Random();
+            int x, y;
+
+            for (int i = 0; i < numProblem; i++)
+            {
+                x = rnd.Next(50);
+                y = rnd.Next(50);
+                if (rnd.NextDouble() >= 0.5)
+                    randomProblems[i] =
+                    new Problem(String.Format("{0} + {1} = ?", x, y), x + y);
+                else
+                    randomProblems[i] =
+                    new Problem(String.Format("{0} - {1} = ?", x, y), x - y);
+            }
+
+            return randomProblems;
+        }
+
+        static void Main(string[] args)
+        {
+            int score = 0;
+
+            Console.WriteLine("Score: {0}, Difficulty: {1}",score,Difficulty.Easy);
+
+            Console.Write("Select Mode: ");
+            int mode = int.Parse(Console.ReadLine());
+            if (mode != 0 || mode != 1 || mode != 2)
+            {
+                Console.WriteLine("Please input 0 - 2");
+                mode = int.Parse(Console.ReadLine());
+            if (mode = 1)
+                {
+                    GenerateRandomProblems();
+                }
+            }
+        }
+    }
+}
