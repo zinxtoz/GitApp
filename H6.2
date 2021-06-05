@@ -1,0 +1,32 @@
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("Enter your Subject 1 Grade (0-4) : ");
+            double g1 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 1 Course Number : ");
+            double c1 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 2 Grade (0-4) : ");
+            double g2 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 2 Course Number : ");
+            double c2 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 3 Grade (0-4) : ");
+            double g3 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 3 Course Number : ");
+            double c3 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 4 Grade (0-4) : ");
+            double g4 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your Subject 4 Course Number : ");
+            double c4 = double.Parse(Console.ReadLine());
+
+            double gpa = ((g1 * c1) + (g2 * c2) + (g3 * c3) + (g4 * c4)) / (c1 + c2 + c3 + c4);
+            Console.Write("Your GPA is : {0}",gpa);
+
+        }
+    }
+}
