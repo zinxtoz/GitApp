@@ -1,0 +1,63 @@
+using System;
+using System.Linq;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            Console.Write("Enter how many number you want to sort: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] number = new int[n];
+
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("Enter your number: ");
+                number[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Array.Sort(number);
+            Console.Write("Ascending Sort: ");
+            foreach (int value in number)
+            {
+                
+                Console.Write(value + " ");
+            }
+
+
+            Console.Write("\n");
+
+            Array.Sort(number);
+            Array.Reverse(number);
+            Console.Write("Descending Sort: ");
+            foreach (int value in number)
+            {
+
+                Console.Write(value + " ");
+            }
+
+            Console.Write("\n");
+            Console.Write("Random: ");
+            Random r = new Random();
+            number = number.OrderBy(x => r.Next()).ToArray();
+
+            foreach (int value in number)
+            {
+
+                Console.Write(value + " ");
+            }
+            Console.Write("\n");
+            Console.Write("Random Again: ");
+            Random r2 = new Random();
+            number = number.OrderBy(x => r2.Next()).ToArray();
+
+            foreach (int value in number)
+            {
+
+                Console.Write(value + " ");
+            }
+        }
+    }
+}
