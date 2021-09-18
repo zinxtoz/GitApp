@@ -77,13 +77,17 @@ namespace Quiz
         static void Main(string[] args)
         {
             Console.Write("Input Total Rose: ");
-            Console.ReadLine();
+            int r = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input Total Sun Flower: ");
-            Console.ReadLine();
-
+            int s = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < r; i++)
+            {
                 roseList.addRose();
-
-            
+            }
+            for (int i = 0; i < s; i++)
+            {
+                roseList.addRose();
+            }
             
             
         }
