@@ -56,7 +56,7 @@ namespace Quiz
         }
         public static void addSunF()
         {
-            Console.WriteLine("Input Rose\n");
+            Console.WriteLine("Input Sun Flower\n");
             Console.Write("ID: ");
             var ID = Console.ReadLine();
             Console.Write("Plant Name: ");
@@ -86,7 +86,7 @@ namespace Quiz
             }
             for (int i = 0; i < s; i++)
             {
-                roseList.addRose();
+                roseList.addSunF();
             }
             
             
