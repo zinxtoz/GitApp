@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+
+namespace Quiz
+{
+    public class roseList
+    {
+        private int ID;
+        private string name;
+        private string description;
+        private int amount;
+        private string height;
+        private string circumference;
+        public roseList(int ID, string name, string description, int amount, string height, string circumference)
+        {
+            this.ID = ID;
+            this.name = name;
+            this.description = description;
+            this.amount = amount;
+            this.height = height;
+            this.circumference = circumference;
+        }
+        public static void addRose()
+        {
+            Console.WriteLine("Input Rose\n");
+            Console.Write("ID: ");
+            var ID = Console.ReadLine();
+            Console.Write("Plant Name: ");
+            var name = Console.ReadLine();
+            Console.Write("Plant Description: ");
+            var description = Console.ReadLine();
+            Console.Write("Amount: ");
+            var amount = Console.ReadLine();
+            Console.Write("Height: ");
+            var height = Console.ReadLine();
+            Console.Write("Circumference: ");
+            var circumference = Console.ReadLine();
+        }
+    }
+    public class sunFList
+    {
+        private int ID;
+        private string name;
+        private string description;
+        private int amount;
+        private string height;
+        private string circumference;
+        public sunFList(int ID, string name, string description, int amount, string height, string circumference)
+        {
+            this.ID = ID;
+            this.name = name;
+            this.description = description;
+            this.amount = amount;
+            this.height = height;
+            this.circumference = circumference;
+        }
+        public static void addSunF()
+        {
+            Console.WriteLine("Input Rose\n");
+            Console.Write("ID: ");
+            var ID = Console.ReadLine();
+            Console.Write("Plant Name: ");
+            var name = Console.ReadLine();
+            Console.Write("Plant Description: ");
+            var description = Console.ReadLine();
+            Console.Write("Amount: ");
+            var amount = Console.ReadLine();
+            Console.Write("Height: ");
+            var height = Console.ReadLine();
+            Console.Write("Circumference: ");
+            var circumference = Console.ReadLine();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input Total Rose: ");
+            Console.ReadLine();
+            Console.Write("Input Total Sun Flower: ");
+            Console.ReadLine();
+
+                roseList.addRose();
+
+            
+            
+            
+        }
+    }
+}
